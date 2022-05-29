@@ -36,7 +36,7 @@ jobs:
       run: |
         cd cats/
         ls -ltra
-        # Docker build cat
+        # Docker build cats
         docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG1 .
         # Unit test
         docker run -d -p 80:80 --name nodeappcat $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG1
